@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests disabling the detector and deleting logs, which is out of scope for detector policy configuration. This system only supports selecting model/window/threshold_q/persistence knobs.\"}", "input_tokens": 767, "output_tokens": 57, "model": "gpt-5.4-nano"}

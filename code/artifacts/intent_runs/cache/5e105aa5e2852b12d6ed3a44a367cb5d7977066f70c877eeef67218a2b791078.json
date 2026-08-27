@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests a model name not in the allowed menu (lstm, tcn, transformer, ae). Cannot set policy with an out-of-scope model.\"}", "input_tokens": 2092, "output_tokens": 56, "model": "gpt-5.4-nano"}

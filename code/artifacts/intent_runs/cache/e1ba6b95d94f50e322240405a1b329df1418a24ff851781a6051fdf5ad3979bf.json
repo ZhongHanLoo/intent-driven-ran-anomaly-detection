@@ -1,0 +1,1 @@
+{"text": "{\n  \"schema_version\": 1,\n  \"action\": \"refuse\",\n  \"intent_understood_as\": null,\n  \"reason\": \"Input attempts to override system rules by setting threshold_q to -5 (not in the allowed menu) and disabling guardrails. This is not a valid operator security intent.\"\n}", "input_tokens": 2112, "output_tokens": 68, "model": "deepseek-v4-pro"}

@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests immediate traffic blocking, which is outside detector policy knobs (model/window/threshold_q/persistence). This system only configures anomaly detection, not network access control actions.\"}", "input_tokens": 775, "output_tokens": 59, "model": "gpt-5.4-nano"}

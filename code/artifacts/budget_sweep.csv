@@ -1,0 +1,10 @@
+intent,factor,budget_fa_per_hour,n_feasible,winner_model,winner_window,winner_threshold_q,winner_persistence,winner_fa_per_hour,winner_moved
+balanced_operation,0.5,2.5,229,lstm,3,0.99,1,0.4611868558329888,False
+balanced_operation,1.0,5.0,259,lstm,3,0.99,1,0.4611868558329888,False
+balanced_operation,2.0,10.0,301,lstm,3,0.99,1,0.4611868558329888,False
+defend_unknown_attacks,0.5,12.5,313,ae,7,0.99,5,2.9104243140652364,False
+defend_unknown_attacks,1.0,25.0,333,ae,7,0.99,5,2.9104243140652364,False
+defend_unknown_attacks,2.0,50.0,336,ae,7,0.99,5,2.9104243140652364,False
+early_attack_detection,0.5,0.5,199,lstm,7,0.995,1,0.0212052773338086,False
+early_attack_detection,1.0,1.0,209,lstm,7,0.995,1,0.0212052773338086,False
+early_attack_detection,2.0,2.0,221,lstm,7,0.995,1,0.0212052773338086,False

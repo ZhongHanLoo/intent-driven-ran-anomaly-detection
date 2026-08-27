@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent 'default security stance' is not a canonical intent id. Please provide one of: early_attack_detection, minimize_false_alarms, balanced_operation, defend_unknown_attacks.\"}", "input_tokens": 762, "output_tokens": 60, "model": "gpt-5.4-nano"}

@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent 'unknown threat readiness' is not a recognized canonical intent id. Cannot map to one of: early_attack_detection, minimize_false_alarms, balanced_operation, defend_unknown_attacks.\"}", "input_tokens": 762, "output_tokens": 62, "model": "gpt-5.4-nano"}

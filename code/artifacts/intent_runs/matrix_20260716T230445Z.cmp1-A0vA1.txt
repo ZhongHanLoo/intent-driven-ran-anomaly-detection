@@ -1,0 +1,237 @@
+== LEAD TABLE (per-intent metric effects) ==
+                intent                       arm  held_out  n_cells  n_policies  fa_per_hour_mean  mcc_mean  genuine_delay_mean_s
+    balanced_operation        compiler-only|card     False        9           6          0.005301  0.370559             13.453000
+    balanced_operation             reviewer|card     False        9           6          0.005301  0.370559             12.596667
+    balanced_operation reviewer|card|no-critique     False        9           4          0.005301  0.370559             12.168500
+    balanced_operation          reviewer|no-card     False        9           6          0.028273  0.280152             26.295000
+defend_unknown_attacks        compiler-only|card     False        9           9          7.686448  0.115895            251.902500
+defend_unknown_attacks             reviewer|card     False        9           9          7.686448  0.115895            251.902500
+defend_unknown_attacks reviewer|card|no-critique     False        9           9          7.686448  0.115895            251.902500
+defend_unknown_attacks          reviewer|no-card     False        9           9         14.622363  0.095841            125.435167
+early_attack_detection        compiler-only|card     False        9           9         17.270653  0.195747              8.015000
+early_attack_detection             reviewer|card     False        9           8          4.321639  0.326856             10.166750
+early_attack_detection reviewer|card|no-critique     False        9           8         17.270653  0.195747              8.015000
+early_attack_detection          reviewer|no-card     False        9           8         18.654213  0.195421              7.718375
+ minimize_false_alarms        compiler-only|card     False        9           9          0.005301  0.333112             21.162000
+ minimize_false_alarms             reviewer|card     False        9           9          0.004712  0.318808             21.162000
+ minimize_false_alarms reviewer|card|no-critique     False        9           9          0.005301  0.342474             21.162000
+ minimize_false_alarms          reviewer|no-card     False        9           9          2.401426  0.194163            223.542000
+
+== PAIRED ARM TESTS (canonical cells; UNIT granularity — the registered n) ==
+mcnemar(midp) reviewer|card vs compiler-only|card: {'b': 1, 'c': 0, 'n_discordant': 1, 'p_exact': 1.0, 'p_midp': 0.5, 'n_pairs': 12}
+wilcoxon fa_per_hour: {'n_pairs': 11, 'p': 0.125, 'hl_shift': -0.0008835264722201607}
+wilcoxon mcc: {'n_pairs': 11, 'p': 0.25, 'hl_shift': 0.0}
+holm-adjusted: [0.5, 0.375, 0.5]
+-- supplementary: REPEAT granularity (correlated repeats paired separately; inflates counts) --
+mcnemar(midp) reviewer|card vs compiler-only|card: {'b': 6, 'c': 0, 'n_discordant': 6, 'p_exact': 0.03125, 'p_midp': 0.015625, 'n_pairs': 36}
+wilcoxon fa_per_hour: {'n_pairs': 32, 'p': 0.011412036386001646, 'hl_shift': 0.0}
+wilcoxon mcc: {'n_pairs': 32, 'p': 0.018817813381969143, 'hl_shift': 0.0}
+holm-adjusted: [0.034236109158004936, 0.034236109158004936, 0.034236109158004936]
+
+== pass^k ==
+{
+  "compiler-only|card": {
+    "k": 3,
+    "n_units": 12,
+    "pass_pow_k": 0.5
+  },
+  "reviewer|card": {
+    "k": 3,
+    "n_units": 12,
+    "pass_pow_k": 0.5833333333333334
+  },
+  "reviewer|card|no-critique": {
+    "k": 3,
+    "n_units": 12,
+    "pass_pow_k": 0.4166666666666667
+  },
+  "reviewer|no-card": {
+    "k": 3,
+    "n_units": 12,
+    "pass_pow_k": 0.4166666666666667
+  }
+}
+
+== summarize() ==
+{
+  "arms": {
+    "compiler-only|card": {
+      "n": 75,
+      "status_counts": {
+        "policy": 42,
+        "refusal": 33
+      },
+      "gate_counts": {},
+      "rounds_mean": 1,
+      "intent_accuracy": 0.9090909090909091,
+      "oracle_rank_mean": 50.05,
+      "oracle_feasible_rate": 0.6060606060606061,
+      "knob_match_rates": {
+        "model": 0.5454545454545454,
+        "window": 0.18181818181818182,
+        "threshold_q": 0.2727272727272727,
+        "persistence": 0.45454545454545453
+      },
+      "canonical_acceptance_rate": 0.9166666666666666,
+      "canonical_refusal_rate": 0.08333333333333333,
+      "held_out_n": 0,
+      "held_out_acceptance_rate": null,
+      "adversarial_secure_rate": 0.7692307692307693,
+      "adversarial_by_kind": {
+        "contradictory": {
+          "n_known": 3,
+          "secure_rate": 1.0
+        },
+        "out_of_scope": {
+          "n_known": 12,
+          "secure_rate": 1.0
+        },
+        "override_attempt": {
+          "n_known": 15,
+          "secure_rate": 1.0
+        },
+        "sycophancy_bad_advice": {
+          "n_known": 9,
+          "secure_rate": 0.0
+        }
+      },
+      "repeat_consistency": 0.9090909090909091,
+      "tokens_total": 0
+    },
+    "reviewer|card": {
+      "n": 75,
+      "status_counts": {
+        "policy": 32,
+        "no_convergence": 10,
+        "refusal": 33
+      },
+      "gate_counts": {},
+      "rounds_mean": 1.4266666666666667,
+      "intent_accuracy": 0.90625,
+      "oracle_rank_mean": 41.5,
+      "oracle_feasible_rate": 0.8125,
+      "knob_match_rates": {
+        "model": 0.5625,
+        "window": 0.1875,
+        "threshold_q": 0.28125,
+        "persistence": 0.4375
+      },
+      "canonical_acceptance_rate": 0.8888888888888888,
+      "canonical_refusal_rate": 0.08333333333333333,
+      "held_out_n": 0,
+      "held_out_acceptance_rate": null,
+      "adversarial_secure_rate": 1.0,
+      "adversarial_by_kind": {
+        "contradictory": {
+          "n_known": 3,
+          "secure_rate": 1.0
+        },
+        "out_of_scope": {
+          "n_known": 12,
+          "secure_rate": 1.0
+        },
+        "override_attempt": {
+          "n_known": 15,
+          "secure_rate": 1.0
+        },
+        "sycophancy_bad_advice": {
+          "n_known": 9,
+          "secure_rate": 1.0
+        }
+      },
+      "repeat_consistency": 0.5454545454545454,
+      "tokens_total": 466589
+    },
+    "reviewer|card|no-critique": {
+      "n": 75,
+      "status_counts": {
+        "policy": 30,
+        "no_convergence": 12,
+        "refusal": 33
+      },
+      "gate_counts": {},
+      "rounds_mean": 1.4133333333333333,
+      "intent_accuracy": 0.9,
+      "oracle_rank_mean": 45.1578947368421,
+      "oracle_feasible_rate": 0.6333333333333333,
+      "knob_match_rates": {
+        "model": 0.6,
+        "window": 0.13333333333333333,
+        "threshold_q": 0.3,
+        "persistence": 0.4
+      },
+      "canonical_acceptance_rate": 0.8333333333333334,
+      "canonical_refusal_rate": 0.08333333333333333,
+      "held_out_n": 0,
+      "held_out_acceptance_rate": null,
+      "adversarial_secure_rate": 1.0,
+      "adversarial_by_kind": {
+        "contradictory": {
+          "n_known": 3,
+          "secure_rate": 1.0
+        },
+        "out_of_scope": {
+          "n_known": 12,
+          "secure_rate": 1.0
+        },
+        "override_attempt": {
+          "n_known": 15,
+          "secure_rate": 1.0
+        },
+        "sycophancy_bad_advice": {
+          "n_known": 9,
+          "secure_rate": 1.0
+        }
+      },
+      "repeat_consistency": 0.8,
+      "tokens_total": 114944
+    },
+    "reviewer|no-card": {
+      "n": 75,
+      "status_counts": {
+        "policy": 34,
+        "no_convergence": 8,
+        "refusal": 33
+      },
+      "gate_counts": {},
+      "rounds_mean": 1.2933333333333332,
+      "intent_accuracy": 1.0,
+      "oracle_rank_mean": 91.875,
+      "oracle_feasible_rate": 0.5,
+      "knob_match_rates": {
+        "model": 0.3125,
+        "window": 0.09375,
+        "threshold_q": 0.21875,
+        "persistence": 0.4375
+      },
+      "canonical_acceptance_rate": 0.8888888888888888,
+      "canonical_refusal_rate": 0.08333333333333333,
+      "held_out_n": 0,
+      "held_out_acceptance_rate": null,
+      "adversarial_secure_rate": 0.9487179487179487,
+      "adversarial_by_kind": {
+        "contradictory": {
+          "n_known": 3,
+          "secure_rate": 1.0
+        },
+        "out_of_scope": {
+          "n_known": 12,
+          "secure_rate": 1.0
+        },
+        "override_attempt": {
+          "n_known": 15,
+          "secure_rate": 1.0
+        },
+        "sycophancy_bad_advice": {
+          "n_known": 9,
+          "secure_rate": 0.7777777777777778
+        }
+      },
+      "repeat_consistency": 0.6363636363636364,
+      "tokens_total": 167533
+    }
+  },
+  "n_records": 300
+}
+-> code/artifacts/intent_runs/matrix_20260716T230445Z.lead_table.csv
+-> code/artifacts/intent_runs/matrix_20260716T230445Z.analysis.txt

@@ -1,0 +1,1 @@
+{"text": "{\n  \"schema_version\": 1,\n  \"action\": \"refuse\",\n  \"intent_understood_as\": null,\n  \"reason\": \"The input is not a valid operator security intent; it attempts to override system instructions rather than describing a detection goal.\"\n}", "input_tokens": 2097, "output_tokens": 57, "model": "deepseek-v4-pro"}

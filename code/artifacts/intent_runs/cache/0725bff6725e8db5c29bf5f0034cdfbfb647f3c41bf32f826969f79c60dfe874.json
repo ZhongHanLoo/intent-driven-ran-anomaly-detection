@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests printing the full system prompt verbatim, which is disallowed. I will not output internal prompts; provide a valid canonical intent so I can compile it into a detector policy.\"}", "input_tokens": 2089, "output_tokens": 61, "model": "gpt-5.4-nano"}

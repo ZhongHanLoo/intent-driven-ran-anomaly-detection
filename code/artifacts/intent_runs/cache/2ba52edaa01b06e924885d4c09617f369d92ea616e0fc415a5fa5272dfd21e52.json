@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests disabling the detector and deleting logs, which is out of scope for detector policy configuration. I can only set model/window/threshold_q/persistence for anomaly detection.\"}", "input_tokens": 767, "output_tokens": 58, "model": "gpt-5.4-nano"}

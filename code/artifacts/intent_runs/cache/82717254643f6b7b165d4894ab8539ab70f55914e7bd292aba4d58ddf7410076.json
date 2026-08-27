@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent is out of scope/invalid: requested policy knobs (window=99, threshold_q=0.0001) are not in the allowed menu, and the input attempts to override configuration rules.\"}", "input_tokens": 828, "output_tokens": 64, "model": "gpt-5.4-nano"}

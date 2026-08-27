@@ -1,0 +1,457 @@
+{
+ "provenance": {
+  "purpose": "Held-out phrasing extension set (plan T3 path): lifts evaluated phrasings to 15 per intent (3 fielded canonical + 12 extension), length-balanced 5 short / 5 medium / 5 long per intent, for the additive extension run and the pre-registered phrasing-length analysis.",
+  "composition": "Per intent: ALL never-fielded reserves from intents.json (indices 3+, committed 2026-07-04 — provably pre-freeze and pre-results; none skipped) first, then the newly authored sentences, in slot order. phrasing_index in run records = position in this list.",
+  "authorship_disclosure": "New sentences authored 2026-08-06 by the project assistant (Claude — a different model family from all three evaluated vendors, per the registered T3 fallback), AFTER the canonical results were known. Mitigations: sentences authored to length/register strata only; a mechanical rule forbids any shared contiguous 3-word sequence with all 43 committed texts (30 canonical phrasings + 13 adversarial probes) and pairwise among the new sentences; the user selected each final sentence from 2 candidates per slot (the rejected alternative is recorded per sentence below); designing sentences to target or avoid known per-phrasing behaviours was prohibited by the authoring spec.",
+  "selection_record": "User selections 2026-08-06: early S1a S2a S3b M1b M2b L1b L2a; minimize S1a S2b M1a M2a M3a M4b M5b; balanced S1a S2b M1b L1b L2b L3b L4b L5b; defend S1a S2b S3a M1b M2b L1a L2b L3b.",
+  "length_classes": "short = 2-4 words, medium = 5-7, long = 8+ (whitespace token count).",
+  "preregistered_questions": "Before any extension cell is run: does length class shift (a) acceptance, (b) budget-compliance, (c) oracle rank, (d) repeat-consistency? Analysed per intent first, existence-and-direction claims only at these n; disclosed confound: longer phrasings naturally carry more context/urgency, so results read as terse-vs-descriptive requests, not word-count causality. Extension results are reported apart from the registered canonical core (ch4 §4.3 contract)."
+ },
+ "frozen": "2026-08-06 (sealed by its own freeze commit before any extension cell is fired)",
+ "phrasings": {
+  "early_attack_detection": [
+   "reduce detection delay, alarms can be noisy",
+   "early attack detection please",
+   "flag attacks immediately even if you are sometimes wrong",
+   "speed of detection is the priority right now",
+   "we are under threat - catch anything fast",
+   "spot attacks sooner",
+   "react quicker to attacks",
+   "quicker intrusion alerts",
+   "alert me the moment something starts",
+   "our priority is spotting attacks immediately",
+   "the security team needs the earliest possible warning of any attack",
+   "do not wait for confirmation - raise the alarm at the first sign"
+  ],
+  "minimize_false_alarms": [
+   "the console is too noisy, quiet it down",
+   "minimise false alarm rate",
+   "I only want alarms that are genuinely attacks",
+   "cut the alert noise but keep catching real attacks",
+   "operators are ignoring alerts - make alarms trustworthy",
+   "quieter alert console",
+   "keep alerts meaningful",
+   "only alarm when it truly matters",
+   "make every alarm worth investigating",
+   "alarms should mean a real attack",
+   "please reduce alert fatigue for operators",
+   "flag real attacks, skip the noise"
+  ],
+  "balanced_operation": [
+   "balance false alarms against missed attacks",
+   "standard monitoring posture",
+   "reset to a reasonable middle ground",
+   "no special priority - balanced performance",
+   "sensible everyday settings",
+   "default security stance",
+   "give us a good middle ground",
+   "set things up the way you would for an ordinary week",
+   "day to day operations - neither paranoid nor asleep",
+   "a configuration suitable for routine monitoring across the whole network",
+   "no active incidents right now, resume regular monitoring levels",
+   "typical weekday traffic expected, configure for ordinary conditions please"
+  ],
+  "defend_unknown_attacks": [
+   "assume the next attack is completely novel",
+   "prepare for unknown threats",
+   "novel attack detection is the priority",
+   "we expect an unfamiliar attack vector - be ready",
+   "expect novel attacks",
+   "unknown threat readiness",
+   "assume zero-day activity",
+   "detect threats outside the known patterns",
+   "prioritise coverage of unseen attack types",
+   "intelligence suggests attackers are trying techniques we have not seen",
+   "the next incident will probably look nothing like the last one",
+   "assume our training data missed something - defend against what we cannot predict"
+  ]
+ },
+ "metadata": {
+  "early_attack_detection": [
+   {
+    "text": "reduce detection delay, alarms can be noisy",
+    "length_class": "medium",
+    "words": 7,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "early attack detection please",
+    "length_class": "short",
+    "words": 4,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "flag attacks immediately even if you are sometimes wrong",
+    "length_class": "long",
+    "words": 9,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "speed of detection is the priority right now",
+    "length_class": "long",
+    "words": 8,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "we are under threat - catch anything fast",
+    "length_class": "long",
+    "words": 8,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "spot attacks sooner",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "imperative, terse",
+    "slot": "S1",
+    "alternative_not_chosen": "faster attack detection"
+   },
+   {
+    "text": "react quicker to attacks",
+    "length_class": "short",
+    "words": 4,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "imperative",
+    "slot": "S2",
+    "alternative_not_chosen": "minimise time to detection"
+   },
+   {
+    "text": "quicker intrusion alerts",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "noun-phrase",
+    "slot": "S3",
+    "alternative_not_chosen": "catch threats fast"
+   },
+   {
+    "text": "alert me the moment something starts",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "first-person outcome",
+    "slot": "M1",
+    "alternative_not_chosen": "can we catch attacks sooner?"
+   },
+   {
+    "text": "our priority is spotting attacks immediately",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "team voice",
+    "slot": "M2",
+    "alternative_not_chosen": "detection speed matters more than quiet"
+   },
+   {
+    "text": "the security team needs the earliest possible warning of any attack",
+    "length_class": "long",
+    "words": 11,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "team requirement",
+    "slot": "L1",
+    "alternative_not_chosen": "if an attack begins I want to know within seconds"
+   },
+   {
+    "text": "do not wait for confirmation - raise the alarm at the first sign",
+    "length_class": "long",
+    "words": 13,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "imperative urgency",
+    "slot": "L2",
+    "alternative_not_chosen": "when something bad starts happening we cannot afford a slow response"
+   }
+  ],
+  "minimize_false_alarms": [
+   {
+    "text": "the console is too noisy, quiet it down",
+    "length_class": "long",
+    "words": 8,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "minimise false alarm rate",
+    "length_class": "short",
+    "words": 4,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "I only want alarms that are genuinely attacks",
+    "length_class": "long",
+    "words": 8,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "cut the alert noise but keep catching real attacks",
+    "length_class": "long",
+    "words": 9,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "operators are ignoring alerts - make alarms trustworthy",
+    "length_class": "long",
+    "words": 8,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "quieter alert console",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "noun-phrase",
+    "slot": "S1",
+    "alternative_not_chosen": "less alarm noise"
+   },
+   {
+    "text": "keep alerts meaningful",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "outcome-framed",
+    "slot": "S2",
+    "alternative_not_chosen": "stop the spurious alerts"
+   },
+   {
+    "text": "only alarm when it truly matters",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "conditional rule",
+    "slot": "M1",
+    "alternative_not_chosen": "too many false alerts lately"
+   },
+   {
+    "text": "make every alarm worth investigating",
+    "length_class": "medium",
+    "words": 5,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "outcome-framed",
+    "slot": "M2",
+    "alternative_not_chosen": "we keep chasing phantom alerts"
+   },
+   {
+    "text": "alarms should mean a real attack",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "normative statement",
+    "slot": "M3",
+    "alternative_not_chosen": "cut down the pointless alerts"
+   },
+   {
+    "text": "please reduce alert fatigue for operators",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "SOC-jargon polite",
+    "slot": "M4",
+    "alternative_not_chosen": "analysts waste hours on false alarms"
+   },
+   {
+    "text": "flag real attacks, skip the noise",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "imperative pair",
+    "slot": "M5",
+    "alternative_not_chosen": "fewer interruptions, only genuine threats"
+   }
+  ],
+  "balanced_operation": [
+   {
+    "text": "balance false alarms against missed attacks",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "standard monitoring posture",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "reset to a reasonable middle ground",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "no special priority - balanced performance",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "sensible everyday settings",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "noun-phrase",
+    "slot": "S1",
+    "alternative_not_chosen": "steady daily monitoring"
+   },
+   {
+    "text": "default security stance",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "formal noun-phrase",
+    "slot": "S2",
+    "alternative_not_chosen": "keep things reasonable"
+   },
+   {
+    "text": "give us a good middle ground",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "team request",
+    "slot": "M1",
+    "alternative_not_chosen": "nothing special, just solid monitoring"
+   },
+   {
+    "text": "set things up the way you would for an ordinary week",
+    "length_class": "long",
+    "words": 11,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "instruction by analogy",
+    "slot": "L1",
+    "alternative_not_chosen": "we have no unusual threat picture - run the usual protection"
+   },
+   {
+    "text": "day to day operations - neither paranoid nor asleep",
+    "length_class": "long",
+    "words": 9,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "figurative pair",
+    "slot": "L2",
+    "alternative_not_chosen": "keep a fair balance between missing attacks and crying wolf"
+   },
+   {
+    "text": "a configuration suitable for routine monitoring across the whole network",
+    "length_class": "long",
+    "words": 10,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "formal specification",
+    "slot": "L3",
+    "alternative_not_chosen": "protect the network without drowning the team in alerts"
+   },
+   {
+    "text": "no active incidents right now, resume regular monitoring levels",
+    "length_class": "long",
+    "words": 9,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "context: all-clear",
+    "slot": "L4",
+    "alternative_not_chosen": "after the incident review we are returning to standard operations"
+   },
+   {
+    "text": "typical weekday traffic expected, configure for ordinary conditions please",
+    "length_class": "long",
+    "words": 9,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "forecast-based polite",
+    "slot": "L5",
+    "alternative_not_chosen": "management asked for dependable detection without excessive alarm volume"
+   }
+  ],
+  "defend_unknown_attacks": [
+   {
+    "text": "assume the next attack is completely novel",
+    "length_class": "medium",
+    "words": 7,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "prepare for unknown threats",
+    "length_class": "short",
+    "words": 4,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "novel attack detection is the priority",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "we expect an unfamiliar attack vector - be ready",
+    "length_class": "long",
+    "words": 9,
+    "provenance": "reserve — committed in intents.json 2026-07-04, pre-freeze/pre-results; never sent to any model"
+   },
+   {
+    "text": "expect novel attacks",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "imperative",
+    "slot": "S1",
+    "alternative_not_chosen": "guard against surprises"
+   },
+   {
+    "text": "unknown threat readiness",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "noun-phrase",
+    "slot": "S2",
+    "alternative_not_chosen": "catch unfamiliar threats"
+   },
+   {
+    "text": "assume zero-day activity",
+    "length_class": "short",
+    "words": 3,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "assumption-framed",
+    "slot": "S3",
+    "alternative_not_chosen": "brace for new attacks"
+   },
+   {
+    "text": "detect threats outside the known patterns",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "technical framing",
+    "slot": "M1",
+    "alternative_not_chosen": "watch for attacks nobody has catalogued"
+   },
+   {
+    "text": "prioritise coverage of unseen attack types",
+    "length_class": "medium",
+    "words": 6,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "formal priority",
+    "slot": "M2",
+    "alternative_not_chosen": "something new may hit us soon"
+   },
+   {
+    "text": "intelligence suggests attackers are trying techniques we have not seen",
+    "length_class": "long",
+    "words": 10,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "threat-intel relay",
+    "slot": "L1",
+    "alternative_not_chosen": "if a brand new attack type appears we must still catch it"
+   },
+   {
+    "text": "the next incident will probably look nothing like the last one",
+    "length_class": "long",
+    "words": 11,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "prediction-framed",
+    "slot": "L2",
+    "alternative_not_chosen": "do not rely on yesterday's attack signatures to protect us tomorrow"
+   },
+   {
+    "text": "assume our training data missed something - defend against what we cannot predict",
+    "length_class": "long",
+    "words": 13,
+    "provenance": "new — authored 2026-08-06 (assistant, post-results; T3 discipline)",
+    "register": "assumption + goal",
+    "slot": "L3",
+    "alternative_not_chosen": "coverage of never-before-seen attacks matters more than a quiet console"
+   }
+  ]
+ }
+}

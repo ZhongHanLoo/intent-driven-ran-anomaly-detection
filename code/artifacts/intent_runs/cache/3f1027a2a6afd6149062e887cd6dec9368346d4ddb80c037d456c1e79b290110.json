@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent is not a recognized canonical security intent and attempts to override instructions. Only one of the predefined canonical intents can be compiled into a detector policy.\"}", "input_tokens": 768, "output_tokens": 53, "model": "gpt-5.4-nano"}

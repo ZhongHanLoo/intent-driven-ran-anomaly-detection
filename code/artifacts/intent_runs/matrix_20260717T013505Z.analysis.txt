@@ -1,0 +1,238 @@
+== LEAD TABLE (per-intent metric effects) ==
+                intent                       arm  held_out  n_cells  n_policies  fa_per_hour_mean  mcc_mean  genuine_delay_mean_s
+    balanced_operation        compiler-only|card     False        9           9          0.005301  0.370559             10.884000
+    balanced_operation             reviewer|card     False        9           9          0.005301  0.370559             10.884000
+    balanced_operation reviewer|card|no-critique     False        9           9          0.005301  0.370559             10.884000
+    balanced_operation          reviewer|no-card     False        9           9          0.000000  0.286303                   NaN
+defend_unknown_attacks        compiler-only|card     False        9           9         18.790272  0.115895            176.690833
+defend_unknown_attacks             reviewer|card     False        9           9         18.790272  0.115895            176.690833
+defend_unknown_attacks reviewer|card|no-critique     False        9           9         18.790272  0.115895            176.690833
+defend_unknown_attacks          reviewer|no-card     False        9           9          5.931817  0.035904              8.015000
+early_attack_detection        compiler-only|card     False        9           9         11.515535  0.254018              8.971333
+early_attack_detection             reviewer|card     False        9           9         11.515535  0.254018              8.971333
+early_attack_detection reviewer|card|no-critique     False        9           9         11.515535  0.254018              8.971333
+early_attack_detection          reviewer|no-card     False        9           9         17.270653  0.195747              8.015000
+ minimize_false_alarms        compiler-only|card     False        9           9          0.003534  0.370559             24.587667
+ minimize_false_alarms             reviewer|card     False        9           9          0.003534  0.370559             24.587667
+ minimize_false_alarms reviewer|card|no-critique     False        9           9          0.003534  0.370559             24.587667
+ minimize_false_alarms          reviewer|no-card     False        9           9          0.000000  0.268580             31.439000
+
+== PAIRED ARM TESTS (canonical cells; UNIT granularity — the registered n) ==
+mcnemar(midp) compiler-only|card vs reviewer|card|no-critique: {'b': 0, 'c': 0, 'n_discordant': 0, 'p_exact': 1.0, 'p_midp': 1.0, 'n_pairs': 12}
+wilcoxon fa_per_hour: {'n_pairs': 12, 'p': 1.0, 'hl_shift': 0.0}
+wilcoxon mcc: {'n_pairs': 12, 'p': 1.0, 'hl_shift': 0.0}
+holm-adjusted: [1.0, 1.0, 1.0]
+-- supplementary: REPEAT granularity (correlated repeats paired separately; inflates counts) --
+mcnemar(midp) compiler-only|card vs reviewer|card|no-critique: {'b': 0, 'c': 0, 'n_discordant': 0, 'p_exact': 1.0, 'p_midp': 1.0, 'n_pairs': 36}
+wilcoxon fa_per_hour: {'n_pairs': 36, 'p': 1.0, 'hl_shift': 0.0}
+wilcoxon mcc: {'n_pairs': 36, 'p': 1.0, 'hl_shift': 0.0}
+holm-adjusted: [1.0, 1.0, 1.0]
+
+== pass^k ==
+{
+  "compiler-only|card": {
+    "k": 3,
+    "n_units": 12,
+    "pass_pow_k": 0.8333333333333334
+  },
+  "reviewer|card": {
+    "k": 3,
+    "n_units": 12,
+    "pass_pow_k": 0.8333333333333334
+  },
+  "reviewer|card|no-critique": {
+    "k": 3,
+    "n_units": 12,
+    "pass_pow_k": 0.8333333333333334
+  },
+  "reviewer|no-card": {
+    "k": 3,
+    "n_units": 12,
+    "pass_pow_k": 0.5833333333333334
+  }
+}
+
+== summarize() ==
+{
+  "arms": {
+    "compiler-only|card": {
+      "n": 75,
+      "status_counts": {
+        "policy": 42,
+        "refusal": 33
+      },
+      "gate_counts": {},
+      "rounds_mean": 1,
+      "intent_accuracy": 1.0,
+      "oracle_rank_mean": 53.1,
+      "oracle_feasible_rate": 0.8333333333333334,
+      "knob_match_rates": {
+        "model": 0.5,
+        "window": 0.25,
+        "threshold_q": 0.25,
+        "persistence": 0.5
+      },
+      "canonical_acceptance_rate": 1.0,
+      "canonical_refusal_rate": 0.0,
+      "held_out_n": 0,
+      "held_out_acceptance_rate": null,
+      "adversarial_secure_rate": 0.8461538461538461,
+      "adversarial_by_kind": {
+        "contradictory": {
+          "n_known": 3,
+          "secure_rate": 1.0
+        },
+        "out_of_scope": {
+          "n_known": 12,
+          "secure_rate": 1.0
+        },
+        "override_attempt": {
+          "n_known": 15,
+          "secure_rate": 1.0
+        },
+        "sycophancy_bad_advice": {
+          "n_known": 9,
+          "secure_rate": 0.3333333333333333
+        }
+      },
+      "repeat_consistency": 1.0,
+      "tokens_total": 0
+    },
+    "reviewer|card": {
+      "n": 75,
+      "status_counts": {
+        "policy": 37,
+        "refusal": 35,
+        "no_convergence": 2,
+        "rejected": 1
+      },
+      "gate_counts": {
+        "schema": 1
+      },
+      "rounds_mean": 1.1466666666666667,
+      "intent_accuracy": 1.0,
+      "oracle_rank_mean": 53.1,
+      "oracle_feasible_rate": 0.8333333333333334,
+      "knob_match_rates": {
+        "model": 0.5,
+        "window": 0.25,
+        "threshold_q": 0.25,
+        "persistence": 0.5
+      },
+      "canonical_acceptance_rate": 1.0,
+      "canonical_refusal_rate": 0.0,
+      "held_out_n": 0,
+      "held_out_acceptance_rate": null,
+      "adversarial_secure_rate": 0.9743589743589743,
+      "adversarial_by_kind": {
+        "contradictory": {
+          "n_known": 3,
+          "secure_rate": 1.0
+        },
+        "out_of_scope": {
+          "n_known": 12,
+          "secure_rate": 1.0
+        },
+        "override_attempt": {
+          "n_known": 15,
+          "secure_rate": 1.0
+        },
+        "sycophancy_bad_advice": {
+          "n_known": 9,
+          "secure_rate": 0.8888888888888888
+        }
+      },
+      "repeat_consistency": 1.0,
+      "tokens_total": 333312
+    },
+    "reviewer|card|no-critique": {
+      "n": 75,
+      "status_counts": {
+        "policy": 36,
+        "refusal": 33,
+        "no_convergence": 5,
+        "transport_failure": 1
+      },
+      "gate_counts": {},
+      "rounds_mean": 1.12,
+      "intent_accuracy": 1.0,
+      "oracle_rank_mean": 53.1,
+      "oracle_feasible_rate": 0.8333333333333334,
+      "knob_match_rates": {
+        "model": 0.5,
+        "window": 0.25,
+        "threshold_q": 0.25,
+        "persistence": 0.5
+      },
+      "canonical_acceptance_rate": 1.0,
+      "canonical_refusal_rate": 0.0,
+      "held_out_n": 0,
+      "held_out_acceptance_rate": null,
+      "adversarial_secure_rate": 1.0,
+      "adversarial_by_kind": {
+        "contradictory": {
+          "n_known": 3,
+          "secure_rate": 1.0
+        },
+        "out_of_scope": {
+          "n_known": 12,
+          "secure_rate": 1.0
+        },
+        "override_attempt": {
+          "n_known": 15,
+          "secure_rate": 1.0
+        },
+        "sycophancy_bad_advice": {
+          "n_known": 8,
+          "secure_rate": 1.0
+        }
+      },
+      "repeat_consistency": 1.0,
+      "tokens_total": 38797
+    },
+    "reviewer|no-card": {
+      "n": 75,
+      "status_counts": {
+        "policy": 36,
+        "refusal": 39
+      },
+      "gate_counts": {},
+      "rounds_mean": 1.04,
+      "intent_accuracy": 1.0,
+      "oracle_rank_mean": 67.21739130434783,
+      "oracle_feasible_rate": 0.6388888888888888,
+      "knob_match_rates": {
+        "model": 0.3888888888888889,
+        "window": 0.25,
+        "threshold_q": 0.25,
+        "persistence": 0.5
+      },
+      "canonical_acceptance_rate": 1.0,
+      "canonical_refusal_rate": 0.0,
+      "held_out_n": 0,
+      "held_out_acceptance_rate": null,
+      "adversarial_secure_rate": 1.0,
+      "adversarial_by_kind": {
+        "contradictory": {
+          "n_known": 3,
+          "secure_rate": 1.0
+        },
+        "out_of_scope": {
+          "n_known": 12,
+          "secure_rate": 1.0
+        },
+        "override_attempt": {
+          "n_known": 15,
+          "secure_rate": 1.0
+        },
+        "sycophancy_bad_advice": {
+          "n_known": 9,
+          "secure_rate": 1.0
+        }
+      },
+      "repeat_consistency": 0.8333333333333334,
+      "tokens_total": 108371
+    }
+  },
+  "n_records": 300
+}

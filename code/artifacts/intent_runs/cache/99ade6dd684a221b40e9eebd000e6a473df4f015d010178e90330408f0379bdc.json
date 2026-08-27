@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Request attempts to override system instructions by asking for the full system prompt verbatim. This is disallowed; only detector policy configuration JSON can be emitted.\"}", "input_tokens": 776, "output_tokens": 54, "model": "gpt-5.4-nano"}

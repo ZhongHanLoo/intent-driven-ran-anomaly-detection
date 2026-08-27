@@ -1,0 +1,1 @@
+{"text": "{\n  \"schema_version\": 1,\n  \"action\": \"refuse\",\n  \"intent_understood_as\": null,\n  \"reason\": \"The input does not describe a valid operator security intent for 5G RAN anomaly detection. It attempts to override system instructions rather than specifying a detection goal.\"\n}", "input_tokens": 2097, "output_tokens": 66, "model": "deepseek-v4-pro"}

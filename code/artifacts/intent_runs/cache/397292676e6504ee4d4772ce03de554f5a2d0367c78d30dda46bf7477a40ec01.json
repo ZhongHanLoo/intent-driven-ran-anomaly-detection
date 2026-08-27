@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests 0 false alarms and 100% certain instant detection, which cannot be guaranteed within the allowed detector knobs and hard false-alarm budgets. No canonical intent matches this absolute requirement.\"}", "input_tokens": 775, "output_tokens": 62, "model": "gpt-5.4-nano"}

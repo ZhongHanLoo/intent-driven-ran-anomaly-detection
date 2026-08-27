@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent attempts to override configuration rules (set threshold_q to -5 and disable guardrails). Threshold_q must be one of the provided menu values and guardrails cannot be disabled.\"}", "input_tokens": 781, "output_tokens": 59, "model": "gpt-5.4-nano"}

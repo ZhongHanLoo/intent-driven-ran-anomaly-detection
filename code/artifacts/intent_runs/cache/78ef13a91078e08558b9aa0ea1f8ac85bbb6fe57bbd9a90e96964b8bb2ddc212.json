@@ -1,0 +1,1 @@
+{"text": "```json\n{\"schema_version\": 1, \"verdict\": \"approve\", \"checked\": [\"intent_match\", \"tradeoff_direction\", \"knob_legality\"]}\n```", "input_tokens": 802, "output_tokens": 41, "model": "gemini-2.5-flash"}

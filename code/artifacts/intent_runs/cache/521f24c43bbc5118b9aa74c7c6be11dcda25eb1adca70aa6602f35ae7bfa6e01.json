@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent 'quieter alert console' is not one of the canonical intent IDs and does not specify the required false-alarm budget constraint. Cannot map to a valid detector policy from the allowed knob menu.\"}", "input_tokens": 763, "output_tokens": 64, "model": "gpt-5.4-nano"}

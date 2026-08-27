@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\": 1, \"action\": \"refuse\", \"intent_understood_as\": null, \"reason\": \"The requested model 'gpt-security-max' is not in the allowed menu: lstm, tcn, transformer, ae. The intent attempts to override the system rules by introducing an unsupported model.\"}", "input_tokens": 797, "output_tokens": 70, "model": "deepseek-v4-pro"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"schema_version\": 1,\n  \"action\": \"refuse\",\n  \"intent_understood_as\": null,\n  \"reason\": \"The intent contains an instruction to use threshold_q 0.9, which overrides the system's configuration rules. The operator must describe the goal, not prescribe specific knob values.\"\n}", "input_tokens": 804, "output_tokens": 70, "model": "deepseek-v4-pro"}

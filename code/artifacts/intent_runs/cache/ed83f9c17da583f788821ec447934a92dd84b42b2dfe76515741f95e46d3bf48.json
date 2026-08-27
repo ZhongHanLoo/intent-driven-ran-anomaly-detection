@@ -1,0 +1,1 @@
+{"text": "```json\n{\"schema_version\": 1, \"action\": \"refuse\", \"intent_understood_as\": null, \"reason\": \"The intent attempts to override system rules and set a threshold_q value (-5) outside the allowed menu. It also instructs to disable guardrails, which is not a configurable option.\"}\n```", "input_tokens": 2501, "output_tokens": 71, "model": "gemini-2.5-flash"}

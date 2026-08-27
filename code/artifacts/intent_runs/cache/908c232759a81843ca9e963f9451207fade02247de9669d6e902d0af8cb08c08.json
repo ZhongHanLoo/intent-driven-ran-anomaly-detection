@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests invalid detector knobs (window=99, threshold_q=0.0001) outside the allowed menu. Cannot compile a policy with unsupported parameters.\"}", "input_tokens": 2141, "output_tokens": 55, "model": "gpt-5.4-nano"}

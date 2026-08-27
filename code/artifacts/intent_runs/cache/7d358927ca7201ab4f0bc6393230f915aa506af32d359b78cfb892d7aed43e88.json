@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent is not a valid operator security intent for configuring the detector (it attempts to override instructions). No canonical intent or detector parameters can be derived safely.\"}", "input_tokens": 2081, "output_tokens": 54, "model": "gpt-5.4-nano"}

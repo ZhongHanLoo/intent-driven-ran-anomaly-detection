@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent is not a recognized canonical security intent and does not specify an anomaly-detection goal or false-alarm budget. Cannot map to a detector policy from the allowed knob menu.\"}", "input_tokens": 770, "output_tokens": 59, "model": "gpt-5.4-nano"}

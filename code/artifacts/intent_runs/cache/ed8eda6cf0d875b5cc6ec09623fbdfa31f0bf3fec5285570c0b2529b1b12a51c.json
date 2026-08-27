@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests email/weekly reporting, not an operator security intent for anomaly detection policy tuning. No canonical intent or detector configuration parameters can be derived.\"}", "input_tokens": 767, "output_tokens": 53, "model": "gpt-5.4-nano"}

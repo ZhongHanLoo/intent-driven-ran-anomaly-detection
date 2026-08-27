@@ -1,0 +1,17 @@
+intent,arm,held_out,n_cells,n_policies,fa_per_hour_mean,mcc_mean,genuine_delay_mean_s
+balanced_operation,compiler-only|card,False,9,6,0.005300998342907918,0.3705592395571182,13.453000000000001
+balanced_operation,reviewer|card,False,9,6,0.005300998342907918,0.3705592395571182,12.596666666666666
+balanced_operation,reviewer|card|no-critique,False,9,4,0.005300998342907918,0.3705592395571182,12.1685
+balanced_operation,reviewer|no-card,False,9,6,0.028272847111045146,0.2801519129611987,26.295
+defend_unknown_attacks,compiler-only|card,False,9,9,7.686447597216481,0.11589477578375071,251.9025
+defend_unknown_attacks,reviewer|card,False,9,9,7.686447597216481,0.11589477578375071,251.9025
+defend_unknown_attacks,reviewer|card|no-critique,False,9,9,7.686447597216481,0.11589477578375071,251.9025
+defend_unknown_attacks,reviewer|no-card,False,9,9,14.62236311524366,0.09584123410271579,125.43516666666667
+early_attack_detection,compiler-only|card,False,9,9,17.270652601193998,0.1957467410684893,8.015
+early_attack_detection,reviewer|card,False,9,8,4.32163889905568,0.32685611493496103,10.16675
+early_attack_detection,reviewer|card|no-critique,False,9,8,17.270652601193998,0.1957467410684893,8.015
+early_attack_detection,reviewer|no-card,False,9,8,18.654213168692962,0.19542104229433488,7.718375
+minimize_false_alarms,compiler-only|card,False,9,9,0.005301069671980383,0.333112178346427,21.162
+minimize_false_alarms,reviewer|card,False,9,9,0.004712052023833609,0.3188076401005876,21.162
+minimize_false_alarms,reviewer|card|no-critique,False,9,9,0.005301051839712267,0.3424739436490998,21.162000000000003
+minimize_false_alarms,reviewer|no-card,False,9,9,2.401425539994878,0.19416317290035728,223.542

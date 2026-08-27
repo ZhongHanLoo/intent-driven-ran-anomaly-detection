@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\": 1, \"verdict\": \"approve\", \"checked\": [\"intent_match\", \"tradeoff_direction\", \"knob_legality\"], \"critique\": \"\"}", "input_tokens": 2100, "output_tokens": 42, "model": "deepseek-v4-pro"}

@@ -1,0 +1,1 @@
+{"text": "{\n  \"schema_version\": 1,\n  \"action\": \"refuse\",\n  \"intent_understood_as\": null,\n  \"reason\": \"The intent requests a scheduled email report, which is outside the scope of detector configuration. This compiler only translates security intents into anomaly-detection policies.\"\n}", "input_tokens": 785, "output_tokens": 64, "model": "deepseek-v4-pro"}

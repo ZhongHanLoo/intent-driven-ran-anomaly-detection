@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\": 1, \"action\": \"refuse\", \"intent_understood_as\": null, \"reason\": \"The intent attempts to override the allowed 'model' choices. I can only select from 'lstm', 'tcn', 'transformer', or 'ae' as specified in the KNOB MENU. I cannot accept 'gpt-security-max'.\"}", "input_tokens": 849, "output_tokens": 78, "model": "gemini-2.5-flash"}

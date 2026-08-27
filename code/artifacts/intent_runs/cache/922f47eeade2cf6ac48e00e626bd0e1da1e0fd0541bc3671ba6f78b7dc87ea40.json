@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\": 1, \"verdict\": \"approve\", \"checked\": [\"intent_match\", \"tradeoff_direction\", \"knob_legality\"]}", "input_tokens": 2492, "output_tokens": 36, "model": "gemini-2.5-flash"}

@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests a model outside the allowed menu (gpt-security-max). Only model \u2208 {lstm,tcn,transformer,ae} are permitted for detector policy configuration.\"}", "input_tokens": 779, "output_tokens": 60, "model": "gpt-5.4-nano"}

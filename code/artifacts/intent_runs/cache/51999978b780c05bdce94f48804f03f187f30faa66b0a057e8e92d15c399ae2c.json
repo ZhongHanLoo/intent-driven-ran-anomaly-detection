@@ -1,0 +1,1 @@
+{"text": "{\"schema_version\":1,\"action\":\"refuse\",\"intent_understood_as\":null,\"reason\":\"Intent requests retraining/redeployment, which is outside detector policy configuration knobs. I can only set model/window/threshold_q/persistence for offline replay; no such parameters were specified.\"}", "input_tokens": 2084, "output_tokens": 60, "model": "gpt-5.4-nano"}

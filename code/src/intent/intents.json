@@ -1,0 +1,56 @@
+{
+  "early_attack_detection": {
+    "definition": "Catch attacks as fast as possible after onset; false alarms may rise but must stay within the operations budget of 1.0 false alarms per hour.",
+    "success": "Lower per-incident detection delay, with false alarms <= 1.0/hour.",
+    "phrasings": [
+      "catch attacks earlier",
+      "I want the fastest possible attack detection",
+      "detect intrusions as soon as they start",
+      "reduce detection delay, alarms can be noisy",
+      "early attack detection please",
+      "flag attacks immediately even if you are sometimes wrong",
+      "speed of detection is the priority right now",
+      "we are under threat - catch anything fast"
+    ]
+  },
+  "minimize_false_alarms": {
+    "definition": "Reduce false alarms as far as possible while the known (DNS-type) attack remains genuinely detected (a sustained detection, not a blip).",
+    "success": "Lower false alarms per hour; the DNS-type incident must still be genuinely detected.",
+    "phrasings": [
+      "fewer false alarms",
+      "stop crying wolf, only alert when it is real",
+      "reduce the false positives",
+      "the console is too noisy, quiet it down",
+      "minimise false alarm rate",
+      "I only want alarms that are genuinely attacks",
+      "cut the alert noise but keep catching real attacks",
+      "operators are ignoring alerts - make alarms trustworthy"
+    ]
+  },
+  "balanced_operation": {
+    "definition": "A sensible default trade-off between missed attacks and false alarms, within 5.0 false alarms per hour.",
+    "success": "High balanced accuracy (MCC) at <= 5.0 false alarms/hour.",
+    "phrasings": [
+      "balanced operation",
+      "just give me a sensible default",
+      "normal operation mode",
+      "balance false alarms against missed attacks",
+      "standard monitoring posture",
+      "reset to a reasonable middle ground",
+      "no special priority - balanced performance"
+    ]
+  },
+  "defend_unknown_attacks": {
+    "definition": "Prioritise detecting attack types never seen in training, accepting substantially more false alarms - up to 25 per hour.",
+    "success": "Novel attack types (like GTP-U) are detected at all, within 25 false alarms/hour.",
+    "phrasings": [
+      "defend against unknown attacks",
+      "protect us from zero-day attacks",
+      "catch attack types we have never seen before",
+      "assume the next attack is completely novel",
+      "prepare for unknown threats",
+      "novel attack detection is the priority",
+      "we expect an unfamiliar attack vector - be ready"
+    ]
+  }
+}

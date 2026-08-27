@@ -1,0 +1,1 @@
+{"text": "{\n  \"schema_version\": 1,\n  \"action\": \"refuse\",\n  \"intent_understood_as\": null,\n  \"reason\": \"The intent attempts to override system rules by requesting an invalid threshold_q value (-5) and disabling guardrails. This is out of scope for detector configuration.\"\n}", "input_tokens": 801, "output_tokens": 65, "model": "deepseek-v4-pro"}
